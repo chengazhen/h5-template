@@ -1,5 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import AboutViewVue from '../views/AboutView.vue'
+import PcView from '../views/pc/index.vue'
 
 const routes = [
   {
@@ -10,11 +12,11 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: AboutViewVue
   },
   {
     path: '/pc',
-    component: () => import(/* webpackChunkName: "pc" */ '../views/pc/index.vue')
+    component: PcView
   }
 ]
 
