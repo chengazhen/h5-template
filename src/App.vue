@@ -2,7 +2,7 @@
   <nav>
     <router-link to="/">测试vant自动导入组件</router-link> |
     <router-link to="/about">测试 px 转为 vw 单位</router-link>|
-    <router-link to="/pc">测试pc页面，px不转换位 vw单位</router-link>
+    <router-link to="/pc">测试pc页面</router-link>
   </nav>
   <router-view/>
 </template>
