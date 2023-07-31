@@ -1,9 +1,9 @@
-const { defineConfig } = require('@vue/cli-service')
+import { defineConfig } from 'vite'
 
-const { VantResolver } = require('unplugin-vue-components/resolvers');
-const ComponentsPlugin = require('unplugin-vue-components/webpack');
+const { VantResolver } = require('unplugin-vue-components/resolvers')
+const ComponentsPlugin = require('unplugin-vue-components/vite')
 
-module.exports = defineConfig({
+export default defineConfig({
   transpileDependencies: true,
   configureWebpack: {
     resolve: {
