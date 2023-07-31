@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <div class="home">
+  <div class="home w-100px">
     <div>
       <van-button type="primary">
         我是vant的按钮

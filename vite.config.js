@@ -3,6 +3,7 @@ import getPxToViewport from 'postcss-px-to-viewport'
 import { VantResolver } from 'unplugin-vue-components/resolvers'
 import ComponentsPlugin from 'unplugin-vue-components/vite'
 import vue from '@vitejs/plugin-vue'
+import UnoCSS from 'unocss/vite'
 
 const pxToViewport = getPxToViewport({
   unitToConvert: 'px',
@@ -17,9 +18,12 @@ const pxToViewport = getPxToViewport({
 })
 
 export default defineConfig({
-  plugins: [vue(), ComponentsPlugin({
-    resolvers: [VantResolver()],
-  })],
+  plugins: [
+    vue(),
+    ComponentsPlugin({
+      resolvers: [VantResolver()],
+    }),
+    UnoCSS()],
   transpileDependencies: true,
   resolve: {
     alias: {
@@ -27,7 +31,9 @@ export default defineConfig({
       '@': '/src',
     },
   },
-  postcss: {
-    plugins: [pxToViewport],
+  css: {
+    postcss: {
+      plugins: [pxToViewport],
+    },
   },
 })
