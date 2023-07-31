@@ -1,34 +1,4 @@
 
 {
-  "extends": "@antfu",
-  "rules": {
-    "no-console": "off",
-    "eslint-comments/no-unlimited-disable": "off",
-    "brace-style": [
-      "error",
-      "1tbs"
-    ],
-    "@typescript-eslint/brace-style": [
-      "error",
-      "1tbs"
-    ],
-    "curly": [
-      "error",
-      "all"
-    ],
-    "import/order": [
-      "error",
-      {
-        "groups": ["type","builtin", "external", "internal", "parent"],
-        "newlines-between": "always",
-        "pathGroups": [
-          {
-            "pattern": "type\\s*{\\s*.+\\s*}",
-            "group": "type",
-            "position": "before"
-          }
-        ]
-      }
-    ]
-  }
+  "extends": ["plugin:vue/vue3-recommended"],
 }
