@@ -1,4 +1,19 @@
-
 {
-  "extends": ["plugin:vue/vue3-recommended"],
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:vue/vue3-recommended", "eslint:recommended"
+  ],
+  "plugins": [
+    "vue"
+  ],
+  "parser": "vue-eslint-parser",
+  "rules": {
+    "no-case-declarations": "off",
+    "no-use-before-define": "off",
+    "no-undef": "off"
+  }
 }
