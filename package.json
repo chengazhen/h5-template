@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@antfu/eslint-config": "^0.40.0",
+    "axios": "^1.4.0",
     "eslint": "^8.46.0",
     "pinia": "^2.1.6",
     "vant": "^4.6.3",
