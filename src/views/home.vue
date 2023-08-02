@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import exportImgByCanvas from '../utils/exportImgByCanvas'
 </script>
 
 <template>
-  <div class=" text-24px">
-    sdfsdf
+  <div class=" text-24px" @click="exportImgByCanvas">
+    点击导出图片
   </div>
   <van-cell-group>
     <van-cell title="单元格" value="内容" />
