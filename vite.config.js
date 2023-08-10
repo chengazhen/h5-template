@@ -4,6 +4,7 @@ import { VantResolver } from 'unplugin-vue-components/resolvers'
 import ComponentsPlugin from 'unplugin-vue-components/vite'
 import vue from '@vitejs/plugin-vue'
 import UnoCSS from 'unocss/vite'
+import eslintPlugin from 'vite-plugin-eslint'
 
 const pxToViewport = getPxToViewport({
   unitToConvert: 'px',
@@ -21,6 +22,9 @@ export default defineConfig({
   base: './',
   plugins: [
     vue(),
+    eslintPlugin({
+      include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue']
+    }),
     ComponentsPlugin({
       resolvers: [VantResolver()],
     }),
