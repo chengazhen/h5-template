@@ -18,13 +18,13 @@ const pxToViewport = getPxToViewport({
 })
 
 export default defineConfig({
+  base: './',
   plugins: [
     vue(),
     ComponentsPlugin({
       resolvers: [VantResolver()],
     }),
     UnoCSS()],
-  transpileDependencies: true,
   resolve: {
     alias: {
       'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
